@@ -26,7 +26,7 @@ class GrokCodeFastCard extends LitElement {
   }
 
   static CONSTANTS = {
-    VERSION: '1.0.0',
+    VERSION: '1.8.0',
     LOCAL_STORAGE_KEY: 'grok_code_fast_data',
     SERVICE_DOMAIN: 'xai_conversation',
     SERVICE_SEND_PROMPT: 'grok_code_fast',
@@ -1252,7 +1252,7 @@ window.customCards.push({
 });
 
 console.info(
-  `%c GROK-CODE-FAST-CARD %c Version ${GrokCodeFastCard.CONSTANTS.VERSION} `,
+  `%c GROK-CODE-FAST-CARD %c Version ${GrokCodeFastCard.CONSTANTS.VERSION} (Final) `,
   'color: white; background: #00bcd4; font-weight: bold;',
   'color: #00bcd4; background: white; font-weight: bold;'
 );
