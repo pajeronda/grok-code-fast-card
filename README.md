@@ -28,7 +28,6 @@ This card is **specifically designed** to work with the **xAI Conversation integ
 
 ✅ Install the [xAI Conversation integration](https://github.com/pajeronda/xai_conversation)
 
-
 **Without the xAI Conversation integration, this card will not function.**
 
 ### Home Assistant Version
@@ -39,6 +38,10 @@ This card is **specifically designed** to work with the **xAI Conversation integ
 
 ### Via HACS (Recommended)
 
+### Click this badge to install **xAI Conversation** via **HACS**
+[![Install via your HACS instance.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Pajeronda&repository=xai_conversation&category=integration)
+
+### Click this badge to install **Grok Code Fast Card** via **HACS**
 [![Install via your HACS instance.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=pajeronda&repository=grok-code-fast-card&category=plugin)
 
 **Manual**
