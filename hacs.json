@@ -1,7 +1,7 @@
 {
   "name": "grok-code-fast-card",
-  "content_in_root": false,
+  "content_in_root": true,
   "render_readme": true,
-  "filename": "dist/grok-code-fast-card.js",
+  "filename": "grok-code-fast-card.js",
   "homeassistant": "2025.10.0"
 }
