@@ -39,7 +39,7 @@ This card is **specifically designed** to work with the **xAI Conversation integ
 
 ### Via HACS (Recommended)
 
-[![Install via your HACS instance.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Pajeronda&repository=grok-code-fast-card&category=dashboard)
+[![Install via your HACS instance.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=pajeronda&repository=grok-code-fast-card&category=dashboard)
 
 **Manual**
 
