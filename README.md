@@ -68,8 +68,10 @@ This card is **specifically designed** to work with the **xAI Conversation integ
 
 ## 🚀 Usage
 ---
+**mode card:**
 <img width="752" height="1522" alt="immagine" src="https://github.com/user-attachments/assets/5013de61-b26c-41c1-a4f4-3175f9ad131d" />
 
+**fullscreen:**
 <img width="3000" height="1774" alt="immagine" src="https://github.com/user-attachments/assets/cd37e3a1-c087-40f4-9dd9-d042f74e6293" />
 
 ---
