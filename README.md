@@ -1,9 +1,10 @@
 # 🤖 Grok Code Fast Card
 
 A Lovelace custom card providing a unified chat interface for real-time provisioning, editing, and technical debugging of Home Assistant configurations, accessed directly within the Dashboard.
+
 ---
-> **⚠️ Important**:
-> This card requires the [xAI Conversation](https://github.com/pajeronda/xai_conversation) with the **Grok Code Fast** service configured in Home Assistant.
+> **⚠️ Important:
+> This card requires the [xAI Conversation](https://github.com/pajeronda/xai_conversation) with the **Grok Code Fast** service configured in Home Assistant.**
 ---
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.10%2B-green)
