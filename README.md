@@ -7,7 +7,7 @@ A Lovelace custom card providing a unified chat interface for real-time provisio
 > This card requires the [xAI Conversation](https://github.com/pajeronda/xai_conversation) with the **Grok Code Fast** service configured in Home Assistant.**
 ---
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.10%2B-green)
+![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2025.10%2B-green)
 ![License](https://img.shields.io/badge/license-MIT-orange)
 
 ## ✨ Features
