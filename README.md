@@ -88,10 +88,20 @@ This card is **specifically designed** to work with the **xAI Conversation integ
 4. Click **SAVE**
 
 Or add manually in YAML mode:
-
 ```yaml
 type: custom:grok-code-fast-card
 theme: <your theme>
+```
+
+Example with panel mode:
+
+```yaml
+- type: panel
+    path: code
+    title: GROK CODE FAST
+    cards:
+      - type: custom:grok-code-fast-card
+        theme: <your theme>
 ```
 
 Example with Browser mod:

@@ -26,7 +26,7 @@ class GrokCodeFastCard extends LitElement {
   }
 
   static CONSTANTS = {
-    VERSION: '1.8.0',
+    VERSION: '1.0.1',
     LOCAL_STORAGE_KEY: 'grok_code_fast_data',
     SERVICE_DOMAIN: 'xai_conversation',
     SERVICE_SEND_PROMPT: 'grok_code_fast',
@@ -203,8 +203,8 @@ class GrokCodeFastCard extends LitElement {
 
   static get styles() {
     return css`
-      :host { display: block; position: relative; container-type: inline-size; --spacing: 16px; --spacing-small: 12px; }
-      ha-card { height: 100%; display: flex; flex-direction: column; overflow: visible; }
+      :host { display: block; position: relative; container-type: inline-size; --spacing: 16px; --spacing-small: 12px; height: 100%; }
+      ha-card { height: 100%; min-height: calc(100vh - 56px); display: flex; flex-direction: column; overflow: visible; }
       .error-banner { position: absolute; top: 0; left: 0; right: 0; padding: 12px; color: var(--text-primary-color); text-align: center; cursor: pointer; background-color: var(--error-color); z-index: 9999; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); animation: slideDownFade 0.4s ease-out; }
       .error-banner.warning { background-color: var(--warning-color); }
       .error-banner.success { background-color: var(--success-color); }
@@ -214,17 +214,19 @@ class GrokCodeFastCard extends LitElement {
       .card-content { padding: var(--spacing); flex: 1; display: flex; flex-direction: column; gap: var(--spacing); }
       @container (min-width: 768px) {
         .card-content { flex-direction: row; gap: var(--spacing); align-items: stretch; }
-        .area-left { display: flex; flex-direction: column; flex: 1; gap: var(--spacing); order: 1; }
-        .area-right { display: flex; flex-direction: column; flex: 2; order: 2; }
-        .section-chat { display: flex; flex-direction: column; overflow: hidden; }
-        .chat-history { max-height: 450px; overflow-y: auto; }
-        .area-right .section { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
-        #code-editor-container { flex: 1; overflow: auto; }
+        .area-left { display: grid; grid-template-rows: 1fr auto; flex: 1; min-width: 0; gap: var(--spacing); order: 1; height: calc(100vh - 176px); }
+        .area-right { display: flex; flex-direction: column; flex: 2; min-width: 0; order: 2; }
+        .section-chat { display: flex; flex-direction: column; min-height: 0; margin-bottom: 0; overflow: hidden; }
+        .chat-container { flex: 1; display: flex; flex-direction: column; min-height: 0; position: relative; overflow: hidden; }
+        .section-prompt { margin-bottom: 0; }
+        .chat-history { max-height: none; flex: 1; min-height: 0; }
+        .area-right .section { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+        #code-editor-container { overflow: auto; min-width: 0; max-width: 100%; flex: 1; }
       }
       @container (max-width: 767px) {
         .card-content { flex-direction: column; }
         .area-left, .area-right { width: 100%; }
-        .chat-history { max-height: 270px; overflow-y: auto; }
+        .chat-history { max-height: 270px; }
         #code-editor-container { max-height: 250px; overflow: auto; }
       }
       @container (max-width: 600px) {
@@ -254,7 +256,7 @@ class GrokCodeFastCard extends LitElement {
       @container (min-width: 768px) { #code-editor-container, #code-editor-container ha-code-editor { height: 100%; } }
       .copy-btn { position: absolute; top: 8px; right: 8px; background: var(--primary-color); color: var(--text-primary-color); border: none; padding: 6px 12px; border-radius: var(--ha-card-border-radius, 4px); cursor: pointer; font-size: 12px; z-index: 1; }
       .chat-container { position: relative; }
-      .chat-history { background: var(--secondary-background-color); padding: var(--spacing-small); border-radius: var(--ha-card-border-radius, 8px); border: 1px solid var(--divider-color); overflow-y: auto; scroll-behavior: smooth; max-height: 300px; user-select: text; -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; }
+      .chat-history { background: var(--secondary-background-color); padding: var(--spacing-small); border-radius: var(--ha-card-border-radius, 8px); border: 1px solid var(--divider-color); overflow-y: auto; scroll-behavior: smooth; user-select: text; -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; }
       .chat-message { margin-bottom: 8px; padding: 8px 10px; border-radius: var(--ha-card-border-radius, 8px); word-break: break-word; animation: slideIn 0.3s ease-out; user-select: text; -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; }
       @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
       .chat-message.user { background: var(--primary-color); color: var(--text-primary-color); margin-left: 15%; }
