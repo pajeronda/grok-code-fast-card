@@ -271,6 +271,6 @@ If you find this card useful:
 
 ---
 
-Made with ❤️ by [Pajeronda](https://github.com/pajeronda) • v1.0.0 • Updated 2025-10-15
+Made with ❤️ by [Pajeronda](https://github.com/pajeronda) • v1.0.1 • Updated 2025-11-04
 
 ---
