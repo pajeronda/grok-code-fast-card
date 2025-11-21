@@ -26,7 +26,7 @@ class GrokCodeFastCard extends LitElement {
   }
 
   static CONSTANTS = {
-    VERSION: '1.0.1',
+    VERSION: '1.0.2',
     LOCAL_STORAGE_KEY: 'grok_code_fast_data',
     SERVICE_DOMAIN: 'xai_conversation',
     SERVICE_SEND_PROMPT: 'grok_code_fast',
@@ -913,14 +913,17 @@ class GrokCodeFastCard extends LitElement {
                 const response = await this._callServiceWithRetry({ type: 'call_service', domain: GrokCodeFastCard.CONSTANTS.SERVICE_DOMAIN, service: GrokCodeFastCard.CONSTANTS.SERVICE_SYNC_HISTORY, service_data: serviceData, return_response: true });
                 if (response.response?.messages) {
                     this._chatHistory = response.response.messages.map(msg => {
+                        // Always parse the content, as both user and assistant messages are now structured JSON strings
+                        const { assistantText, assistantCode } = this._parseResponse(msg.content);
+                        
                         if (msg.role === 'user') {
                             return { 
                                 role: 'user', 
-                                content: msg.content, 
+                                content: assistantText, // The user's prompt text
+                                code: assistantCode,    // The user's code
                                 timestamp: new Date(msg.timestamp * 1000).toISOString() 
                             };
                         } else { // Assistant message
-                            const { assistantText, assistantCode } = this._parseResponse(msg.content);
                             return { 
                                 role: 'assistant', 
                                 text: assistantText, 
